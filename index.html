@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Journal</title>
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+    <main>
+        <header>
+            <img src="https://i.pinimg.com/originals/04/7b/de/047bde56cb18e861872113d5b5ec0922.png" alt="dailyBugle_Logo">
+            <h1>Harlin's Daily Journal</h1>
+        </header>
+        <section class="contentContainer">
+            <article class="contentContainer__journalEntry">
+                <h2>Daily Journal</h2>
+            <form action="">
+                <fieldset>
+                    <label for="journalDate">Date of Entry</label>
+                    <input type="date" name="journalDate" id="journalDate">
+                </fieldset>
+                <fieldset>
+                    <label for="conceptsCovered">Concepts Covered</label>
+                    <input type="text" name="conceptsCovered" id="conceptsCovered">
+                </fieldset>
+                <fieldset>
+                    <label for="journalEntry">Journal Entry</label>
+                    <textarea name="journalEntry" id="journalEntry" cols="30" rows="10"></textarea>
+                </fieldset>
+                <fieldset>
+                    <label for="moodForTheDay">Mood for the Day</label>
+                    <select name="mood" id="mood_box">
+                        <option value="Happy">Happy</option>
+                        <option value="Content">Content</option>
+                        <option value="Okay">Okay</option>
+                        <option value="Unsatisfied">Unsatisfied</option>
+                        <option value="Sad">Sad</option>
+                    </select>
+                </fieldset>
+                <button type="submit" value="recordJournalEntry">Record Journal Entry</button>
+            </form>
+            </article>
+
+            <!-- <article class="contentContainer__previousEntries">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </article> -->
+
+        </section>
+
+
+
+
+        <footer>
+            <h3>Harlin Sanchez</h3>
+            <!-- <a href="Github.com/hrlnsnchz"></a>  -->
+            <!-- copyright -->
+        </footer>
+    </main>
+</body>
+</html>

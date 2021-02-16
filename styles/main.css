@@ -5,3 +5,7 @@ fieldset {
     flex-direction: column;
 }
 
+footer {
+    text-align: center;
+    padding-top: 3em;
+}

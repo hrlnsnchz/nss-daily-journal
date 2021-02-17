@@ -13,6 +13,8 @@ let journal = []
     You export a function that provides a version of the
     raw data in the format that you want
 */
+const eventHub = document.querySelector(".container")
+
 export const useJournalEntries = () => {
     const sortedByDate = journal.sort(
         (currentEntry, nextEntry) =>
@@ -28,4 +30,20 @@ export const getEntries = () => {
             // What should happen when we finally have the array?
             journal = entries
         })
+}
+
+const dispatchStateChangeEvent = () => {
+    eventHub.dispatchEvent(new CustomEvent("journalStateChanged"))
+}
+
+export const saveJournalEntry = (entryObject) => {
+    return fetch('http://localhost:8088/entries', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json' 
+        },
+        body: JSON.stringify(entryObject)
+    })
+    .then(getEntries)
+    .then(dispatchStateChangeEvent)
 }

@@ -23,6 +23,7 @@ export const useJournalEntries = () => {
     return sortedByDate
 }
 
+// Removed the expand function like the one in line 41 bc there was an error when fetching.
 export const getEntries = () => {
     return fetch("http://localhost:8088/entries") // Fetch from the API
         .then(response => response.json())  // Parse as JSON

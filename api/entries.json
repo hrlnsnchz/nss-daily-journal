@@ -4,8 +4,44 @@
       "date": "2021-02-17",
       "concept": "ERDs",
       "entry": "We covered ERDs and I understood the concepts, but I can't quite visualize the code yet.",
-      "mood": "Content",
+      "moodId": 2,
       "id": 1
+    },
+    {
+      "date": "2021-02-17",
+      "concept": "ERDs",
+      "entry": "ERDs are awesome I wish they were simpler though. (test)",
+      "mood": "Happy",
+      "id": 2
+    },
+    {
+      "date": "2021-02-21",
+      "concept": "Event Listeners",
+      "entry": "I was talking to Janice when I noticed the events rudely listening. (test)",
+      "mood": "Okay",
+      "id": 3
+    }
+  ],
+  "moods": [
+    {
+      "id": 1,
+      "label": "Happy"
+    },
+    {
+      "id": 2,
+      "label": "Content"
+    },
+    {
+      "id": 3,
+      "label": "Ok"
+    },
+    {
+      "id": 4,
+      "label": "Unsatisfied"
+    },
+    {
+      "id": 5,
+      "label": "Sad"
     }
   ]
 }

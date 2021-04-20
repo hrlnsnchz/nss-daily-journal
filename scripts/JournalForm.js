@@ -1,8 +1,10 @@
 import { saveJournalEntry } from "./JournalDataProvider.js"
+import { MoodForm } from "./moods/MoodForm.js"
+import { getMoods, useMoods } from "./moods/MoodProvider.js"
 
 const eventHub = document.querySelector('.container')
 const contentTarget = document.querySelector('.contentContainer')
-
+let moodsArray = []
 export const JournalFormComponent = () => {
     contentTarget.innerHTML = `<article class="contentContainer__journalEntry">
     <h2>Daily Journal</h2>
@@ -22,17 +24,16 @@ export const JournalFormComponent = () => {
     <fieldset>
         <label for="moodForTheDay">Mood for the Day</label>
         <select name="mood" id="mood_box">
-            <option value="Happy">Happy</option>
-            <option value="Content">Content</option>
-            <option value="Okay">Okay</option>
-            <option value="Unsatisfied">Unsatisfied</option>
-            <option value="Sad">Sad</option>
+
         </select>
     </fieldset>
     <button type="submit" value="recordJournalEntry">Record Journal Entry</button>
 </form>
 </article>
 `
+getMoods()
+.then(moodsArray = useMoods())
+.then(MoodForm(moodsArray))
 }
 
 eventHub.addEventListener('click', event => {
